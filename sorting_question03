@@ -1,0 +1,11 @@
+class Solution(object):
+    def heightChecker(self, heights):
+        m=[]
+        for i in heights:
+            m.append(i)
+        m.sort()    
+        a=0
+        for i in range(len(m)):
+            if(heights[i]!=m[i]):
+                a+=1
+        return a                
