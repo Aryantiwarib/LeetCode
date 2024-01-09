@@ -1,0 +1,25 @@
+class Solution(object):
+    def mergeSimilarItems(self, items1, items2):
+        l=[]
+        m=items1+items2
+        n=[]
+        k=[]
+        for i in range(len(items1)):
+            for j in range(len(items2)):
+                if(items1[i][0]==items2[j][0]):
+                    n.append(items1[i][0])
+                    a=items1[i][1]+items2[j][1]
+                    b=(items1[i][0],a)
+                    l.append(list(b)) 
+
+        for i in range(len(m)):
+            if(m[i][0] not in n):
+                k.append(m[i])             
+        t=l+k
+        t.sort()
+        return t 
+
+
+
+         
+        
