@@ -1,0 +1,14 @@
+class Solution(object):
+    def minimumOperations(self, nums):
+        a=0
+        nums.sort()
+        for i in range(len(nums)):
+            if(nums.count(0)==len(nums)):
+                break
+            elif(nums[i]!=0):
+                n=int(nums[i])
+                for j in range(len(nums)):
+                    if(nums[j]!=0):
+                        nums[j]=nums[j]-n       
+                a+=1            
+        return a
