@@ -1,0 +1,15 @@
+from itertools import permutations
+class Solution(object):
+    def buyChoco(self, prices, money):
+        l=list(permutations(prices,2))
+        m=[]
+        for i in l:
+            if(sum(i)==money or sum(i)<money):
+                m.append(sum(i))                
+        if(len(prices)<2 or m==[]):
+            return money
+        else:
+            if(min(m)==money):
+                return 0
+            else:
+                return money-min(m)
