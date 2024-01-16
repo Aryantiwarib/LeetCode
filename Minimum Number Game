@@ -1,0 +1,14 @@
+class Solution(object):
+    def numberGame( self,nums):
+        alice=[]
+        bob=[]
+        arr=bob+alice
+        while nums!=[]:
+            alice.append(min(nums))
+            nums.remove(min(nums))
+            bob.append(min(nums))
+            nums.remove(min(nums))
+        for i in range(len(alice)):
+            arr.append(bob[i])    
+            arr.append(alice[i])    
+        return arr 
