@@ -1,0 +1,9 @@
+class Solution(object):
+    def findMaxK(self, nums):
+        for i in range(len(nums)):
+            if(-max(nums) in nums):
+                return max(nums)
+                break
+            else:
+                nums.remove(max(nums))
+        return -1 
