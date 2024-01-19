@@ -1,0 +1,10 @@
+class Solution(object):
+    def isAnagram(self, s, t):
+        l=list(s)
+        l1=list(t)
+        l.sort()
+        l1.sort()
+        if(l==l1):
+            return True 
+        else:
+            return False          
