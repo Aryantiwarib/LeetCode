@@ -1,0 +1,18 @@
+class Solution(object):
+    def minimumCost(self, cost):
+        cost.sort(reverse=True)
+        l=[]
+        if(len(cost)<2):
+            return sum(cost)
+        else:
+            while len(cost)>1:   
+                if(len(cost)>1):
+                    l.append(cost[0])
+                    l.append(cost[1])
+                    for i in range(2,len(cost)):
+                        if(cost[i]<=cost[1]):
+                            cost.remove(cost[i])
+                            break 
+                    cost.remove(cost[0])
+                    cost.remove(cost[0])              
+            return sum(l+cost) 
